@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-12">
+            <div class="btn-group-vertical">
+                
+                <button class="btn btn-primary" routerLink="/">Ana Sayfa</button>
+                <button class="btn btn-primary" routerLink="/assignments">Ödevlerim</button>
+
+                <button class="btn btn-warning disabled">
+                    {{currentUserEmail}}
+                </button>
+                <button class="btn btn-warning" routerLink="/panel/users">Kullanıcılar</button>
+
+                        <button class="btn btn-dark" routerLink="/panel/operation-claim/list">Roller</button>
+                        <button class="btn btn-dark" routerLink="/panel/operation-claim/add">Rol Ekle</button>
+
+                        <button class="btn btn-success" routerLink="/panel/user-operation-claim/list">Kullanıcı Rolleri</button>
+                        <button class="btn btn-success" routerLink="/panel/user-operation-claim/add">Kullanıcıya Rol Ata</button>
+
+                        <button class="btn btn-info" routerLink="/panel/assignment/list">Ödevler</button>
+                        <button class="btn btn-info" routerLink="/panel/assignment/add">Ödev Ekle</button>
+
+                        <button class="btn btn-danger" (click)="logout()">Çıkış yap</button>
+              </div>
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-12">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+            
+        </div>
+    </div>
+</div>

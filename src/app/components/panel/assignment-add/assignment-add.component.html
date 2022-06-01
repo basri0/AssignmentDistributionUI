@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 class="text-center fs-1 mt-2 mb-5">Ödev ekle</h1>
+  <form [formGroup]="addForm">
+          
+            <div class="mb-2">
+                
+                <input class="form-control" type="text" placeholder="İsim" aria-label="default input example" formControlName="name">
+            </div>
+
+            <div class="mb-2">
+                
+                <input class="form-control" type="text" placeholder="Açıklama" aria-label="default input example" formControlName="description">
+            </div>
+
+            <div class="mb-5">
+                <select class="form-select" aria-label="Default select example" formControlName="userId">
+                    <option value="0" selected>Kullanıcı Seçiniz</option>
+                    <option [value]="user.id" *ngFor="let user of users">
+                        {{user.email}}
+                    </option>
+                  </select>
+            </div>
+
+
+            <div class="mb-2 mt-5">
+                <button mat-flat-button color="primary" (click)="add()">Ekle</button>
+            </div>
+
+  </form>
+</div>
+
+<!-- 
+    
+ -->

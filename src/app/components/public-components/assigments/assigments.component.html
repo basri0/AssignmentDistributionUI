@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center">Ödevlerim</h1>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Ödev İsmi</th>
+            <th>Ödev Detayları</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of assignments">
+              
+            <th>
+                {{a.name}}
+            </th>
+                
+            <th>
+                {{a.description}}
+            </th>
+
+                
+          </tr>
+         
+        </tbody>
+      </table>
+</div>

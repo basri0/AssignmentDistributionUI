@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center mt-5">
+ 
+    <form [formGroup]="operationClaimForm">
+        <h1 class="text-center text-dark">Yeni Rol Ekle</h1>
+
+           <div class="m-2">
+            <label class="text-dark">Rol İsmi</label>
+            <input type="text" placeholder="ex. admin" formControlName="name" autocomplete="off" class="form-control">    
+
+        
+           </div>
+
+          <div class="m-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck"  formControlName="isApproved">
+              <label class="form-check-label text-dark" for="invalidCheck">
+                Durumu
+              </label>
+            </div>
+          </div>
+          
+        <div class="gap-2 d-grid">
+            <button type="submit" mat-raised-button color="primary" (click)="add()">Ekle</button>
+        </div>
+      </form>
+</div>

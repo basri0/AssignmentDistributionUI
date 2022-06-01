@@ -1,0 +1,17 @@
+
+  <div class="card mb-2" *ngFor="let a of assignments">
+    <div class="card-header">
+      <strong>Ödev Yapacak Kişi</strong> : {{a.userEmail}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+         <strong>Ödev İsmi : </strong> {{a.name}}
+      </h5>
+      <p class="card-text">
+         <strong>Ödev Açıklaması : </strong> {{a.description}}
+      </p>
+    </div>
+    <div class="card-footer">
+        <button mat-raised-button color="warn" (click)="delete(a)">Sil</button>
+    </div>
+  </div>
